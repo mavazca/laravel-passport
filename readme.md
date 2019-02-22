@@ -7,9 +7,9 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
-# Laravel API Restful com autenticação JWT
+# Laravel API Restful com passport
 
-Projeto api restful em Laravel 5.7 com autenticação JWT
+Projeto api restful em Laravel 5.7 com passport
 
 ## Requisitos
 
@@ -20,54 +20,37 @@ Projeto api restful em Laravel 5.7 com autenticação JWT
 ## Instalação
 
 1. Efetuar a instalação clonando ou baixando do repositorio.
-
     ```bash
-    git clone https://github.com/CodeSiteBr/laravel-api-jwt.git
+    git clone https://github.com/CodeSiteBr/laravel-passport.git
     ```
 
     ```bash
-    git clone git@github.com:CodeSiteBr/laravel-api-jwt.git
+    git clone git@github.com:CodeSiteBr/laravel-passport.git
     ```
 
-    OU Dowload [laravel-api-jwt](https://github.com/CodeSiteBr/laravel-api-jwt/archive/master.zip)
+    OU Dowload [laravel-passport](https://github.com/CodeSiteBr/laravel-passport/archive/master.zip)
 
 2. Entrar na pasta do projeto, execute:
     ```bash
-    cd laravel-api-jwt
+    cd laravel-passport
     ```
 3. Se composer está instalado, execute:
     ```bash
     composer install
     ```
-5. Criar o arquivo .env, execute:
+4. Criar o arquivo .env, execute:
     ```bash
     cp .env.example .env
     ```
-6. Gerar uma nova chave no arquivo .env, execute:
+5. Gerar uma nova chave no arquivo .env, execute:
     ```bash
     php artisan key:generate
     ```
-6. Gerar uma chave JWT no arquivo .env, execute:
-    ```bash
-    php artisan jwt:secret
-    ```
-
-    OBS: Quando várias solicitações simultâneas são feitas com o mesmo JWT, é possível que alguns deles falhem, devido ao  auto-refresh token em todos os pedidos.
-    Defina o tempo de tolerancia em segundos para evitar falha na solicitação paralela.
-
-    No arquivo .env, tempo de tolerancia e segundos
-    ```bash
-    JWT_BLACKLIST_GRACE_PERIOD=30
-    ```
-
-
-8. Criar o arquivo de banco de dados sqlite
+6. Criar o arquivo de banco de dados sqlite
     ```bash
     touch database/database.sqlite
     ```
-
 7. Configurar no arquivo .env o acesso ao SQLite
-
     ```bash
     DB_CONNECTION=sqlite
     #DB_HOST=127.0.0.1
@@ -76,9 +59,7 @@ Projeto api restful em Laravel 5.7 com autenticação JWT
     #DB_USERNAME=homestead
     #DB_PASSWORD=secret
     ```
-
 8. Criar as tabelas e popular com o migrate
-
     ```bash
     php artisan migrate --seed
     ```
@@ -109,8 +90,7 @@ Projeto api restful em Laravel 5.7 com autenticação JWT
     MAIL_ENCRYPTION=null
     ```
 
-13. Para iniciar o servidor do laravel
-
+10. Para iniciar o servidor do laravel
     ```bash
     php artisan serve
     ```
@@ -121,18 +101,13 @@ Projeto api restful em Laravel 5.7 com autenticação JWT
     php artisan serve --port=300
     ```
 
-14. Agora você deve ser capaz de visitar o caminho para onde você instalou o aplicativo e ver a página inicial padrão.
+11. Agora você deve ser capaz de visitar o caminho para onde você instalou o aplicativo e ver a página inicial padrão.
 
     [localhost:8000](http://localhost:8000)  
     [localhost:300](http://localhost:300/)
 
     > usuario: admin@user.com  
     > senha: secret
-
-9. Importar o arquivo da raiz do projeto para o postman 
-    ```bash
-    Laravel JWT.postman_collection.json 
-    ```
 
 ## License
 
