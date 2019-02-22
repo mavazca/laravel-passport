@@ -2,7 +2,7 @@
 
 Route::middleware('auth:api')->prefix('v1')->group(function () {
     route::get('/usuario/info', function () {
-        return Auth::user();
+        return \Auth::user();
         // return request()->user();
     });
 

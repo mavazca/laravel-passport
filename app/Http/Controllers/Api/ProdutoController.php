@@ -15,7 +15,9 @@ class ProdutoController extends Controller
 
     public function store(Request $request)
     {
-        return Produto::create($request->all());
+        $data = $request->all();
+        $data['user_id'] = \Auth::user()->id;
+        return Produto::create($data);
     }
 
     public function show($id)
@@ -51,6 +53,8 @@ class ProdutoController extends Controller
                 'error' => 'Produto não encontrado'
             ], 404);
         }
+
+        // $this->authorize('delete', $produto);
 
         $produto->delete();
         return $produto;
