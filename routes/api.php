@@ -1,18 +1,17 @@
 <?php
 
-Route::prefix('v1')->group(function () {
-    Route::post('login', 'Api\AuthController@login')->name('api.v1.login');
-    Route::post('refresh', 'Api\AuthController@refresh')->name('api.v1.refresh');
+use GuzzleHttp\Psr7\Request;
 
-    Route::group(['middleware' => ['auth:api','jwt.refresh'], 'namespace' => 'Api', 'as' => 'api.v1.'], function () {
-        Route::post('logout', 'AuthController@logout')->name('logout');
-
-        Route::resource('usuarios', 'UserController', ['except' => ['create', 'edit']]);
-        Route::resource('produtos', 'ProdutoController', ['except' => ['create', 'edit']]);
-    });
+Route::middleware('auth:api')->get('/user', function (Request $request) {
+    return $request->user();
 });
 
-Route::resource('produtos', 'Api\ProdutoController', ['as' => 'api', 'except' => ['create', 'edit']]);
+Route::middleware('auth:api')->prefix('v1')->group(function () {
+    Route::resources([
+        'produtos' => 'Api\ProdutoController',
+        'usuarios' => 'Api\UserController'
+    ]);
+});
 
 /*
     Route::resource('produtos', 'ProdutoController');

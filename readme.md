@@ -106,7 +106,7 @@ Projeto api restful em Laravel 5.7 com passport
     [localhost:8000](http://localhost:8000)  
     [localhost:300](http://localhost:300/)
 
-    > usuario: admin@user.com  
+    > usuario: admin@admin.com  
     > senha: secret
 
 ## License
