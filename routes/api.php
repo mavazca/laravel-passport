@@ -1,12 +1,11 @@
 <?php
 
-use GuzzleHttp\Psr7\Request;
-
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
-
 Route::middleware('auth:api')->prefix('v1')->group(function () {
+    route::get('/usuario/info', function () {
+        return Auth::user();
+        // return request()->user();
+    });
+
     Route::resources([
         'produtos' => 'Api\ProdutoController',
         'usuarios' => 'Api\UserController'
