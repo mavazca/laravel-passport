@@ -1,0 +1,385 @@
+{
+	"info": {
+		"_postman_id": "141d5aa4-7fde-43ff-8835-1e7322298075",
+		"name": "Laravel passport",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Produtos",
+			"item": [
+				{
+					"name": "Listar",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": "Envio via formulario",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": "Resposta do laravel como json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjJiMjMyMGI1NWIyNWI1ZjcwN2Y4ODEwOWEzYmIzYTIyNTNmN2UyMTUzOWQzNjA2Y2M0ZTVmODg2MDQ5OTQzODkzNTVhM2U1YjJlMjFlMDkzIn0.eyJhdWQiOiIxIiwianRpIjoiMmIyMzIwYjU1YjI1YjVmNzA3Zjg4MTA5YTNiYjNhMjI1M2Y3ZTIxNTM5ZDM2MDZjYzRlNWY4ODYwNDk5NDM4OTM1NWEzZTViMmUyMWUwOTMiLCJpYXQiOjE1NTA4NjgzMTksIm5iZiI6MTU1MDg2ODMxOSwiZXhwIjoxNTgyNDA0MzE5LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.hNa56snuHf1btwY7_R8kUSL76K-wcN1BjxNPuQYARQyzCXCSnAB8u9ooLujq8ImFgf8K0QNY2CAflDy7VeT64cqh8Zgryi_TZQu7vR8OXLBeqw5oUPX47Mg5fQB9tvNC9uSp21rYXDSAezYIzi5lH7KCXOLryjvxgzSnd6q6v1VskjtUX_UkQYzIsayE72btmAlPKYGwYtt1R2trxMme4MBVAQYjJbBjykiZYLDHvo5Z_l_XWu5Y6XKge9Xx_7BVG0vPTeNMS77U4h8e_7TzkGB7Y4ivZzUhu0dERTdwDYeCA0iN1BXrEfK012DiWCrNYNevHPmHKoCD1xmN9QvFDdcFJFTTSfVfSlr4tSfNzoTWfdVccjD2z7s1cx2l3ZzFlWg0Ny5eu9OI9nQgwovhC1H6YlT-kxA6i0TFoMwL2CXAoz4h_4vfnB6nQ5G_rze9LE-t4_wvTCNUzDCgyyfitFkGPy2ymn6pYRupKybwxLP8ea-YmnR7kayG5M722Uehpj7YxTHWKwD1NiTYF9-fzvJ0iGFbvscbHCdgut09E6geFAheUus4Yk2TzjUFVmdMYI2xjxokLLm8ugDSbuauXh50Ny3SKcxy1UWX61jzcVKlqvwKRSqexjDACwT9sifg-hcwGS32tXCvhbilyMTMLiUwxaOwr7BJn3HFtLfPtiU",
+								"type": "text"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/produtos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"produtos"
+							]
+						},
+						"description": "Lista de produtos"
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"description": "Envio via formulario",
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"description": "Resposta do laravel como json",
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjJiMjMyMGI1NWIyNWI1ZjcwN2Y4ODEwOWEzYmIzYTIyNTNmN2UyMTUzOWQzNjA2Y2M0ZTVmODg2MDQ5OTQzODkzNTVhM2U1YjJlMjFlMDkzIn0.eyJhdWQiOiIxIiwianRpIjoiMmIyMzIwYjU1YjI1YjVmNzA3Zjg4MTA5YTNiYjNhMjI1M2Y3ZTIxNTM5ZDM2MDZjYzRlNWY4ODYwNDk5NDM4OTM1NWEzZTViMmUyMWUwOTMiLCJpYXQiOjE1NTA4NjgzMTksIm5iZiI6MTU1MDg2ODMxOSwiZXhwIjoxNTgyNDA0MzE5LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.hNa56snuHf1btwY7_R8kUSL76K-wcN1BjxNPuQYARQyzCXCSnAB8u9ooLujq8ImFgf8K0QNY2CAflDy7VeT64cqh8Zgryi_TZQu7vR8OXLBeqw5oUPX47Mg5fQB9tvNC9uSp21rYXDSAezYIzi5lH7KCXOLryjvxgzSnd6q6v1VskjtUX_UkQYzIsayE72btmAlPKYGwYtt1R2trxMme4MBVAQYjJbBjykiZYLDHvo5Z_l_XWu5Y6XKge9Xx_7BVG0vPTeNMS77U4h8e_7TzkGB7Y4ivZzUhu0dERTdwDYeCA0iN1BXrEfK012DiWCrNYNevHPmHKoCD1xmN9QvFDdcFJFTTSfVfSlr4tSfNzoTWfdVccjD2z7s1cx2l3ZzFlWg0Ny5eu9OI9nQgwovhC1H6YlT-kxA6i0TFoMwL2CXAoz4h_4vfnB6nQ5G_rze9LE-t4_wvTCNUzDCgyyfitFkGPy2ymn6pYRupKybwxLP8ea-YmnR7kayG5M722Uehpj7YxTHWKwD1NiTYF9-fzvJ0iGFbvscbHCdgut09E6geFAheUus4Yk2TzjUFVmdMYI2xjxokLLm8ugDSbuauXh50Ny3SKcxy1UWX61jzcVKlqvwKRSqexjDACwT9sifg-hcwGS32tXCvhbilyMTMLiUwxaOwr7BJn3HFtLfPtiU"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/produtos/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"produtos",
+								"3"
+							]
+						},
+						"description": "Lista de produtos"
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"description": "Envio via formulario",
+								"type": "text"
+							},
+							{
+								"description": "Resposta do laravel como json",
+								"key": "Accept",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImQ0MTMwYjRhODliN2FiNmY3NzlhNDlhNTY3MjY1MjZmZWY2MGVlZGI1ZjM4ZjM3MWRmYzY2NjUzNzE4NDNjNzc5YzFjOWM2NDhkOWUyMWY0In0.eyJhdWQiOiIxIiwianRpIjoiZDQxMzBiNGE4OWI3YWI2Zjc3OWE0OWE1NjcyNjUyNmZlZjYwZWVkYjVmMzhmMzcxZGZjNjY2NTM3MTg0M2M3NzljMWM5YzY0OGQ5ZTIxZjQiLCJpYXQiOjE1NTA4NjgyMDAsIm5iZiI6MTU1MDg2ODIwMCwiZXhwIjoxNTgyNDA0MjAwLCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.ooLIsVM4uj661eUtHKJ-C7Dzge1TMTZOE2Pi9kQVmPVmvMDwHXGhKUgrvkFCaeK_WXYjbuvRYicWF4V3-c86Sj_ZGDurSt7wjVUanCkqllGh5sN1WLsCkVeo6um13DSfQ4k2-5f4ks48dmaK4wDoXxajH3nAfO7Fyu5wEDCOrH-dESBPA7NZ-dxquBfLE3j1-xf7FDavz0If4PRagKGtkDPPE8tsvit9wAlg58sAvdgSkkOTbD_rX5ZUiMLO0Dokx-sFsMF4y6dfw_LxNzwRjy9cd1ndidl8lfOfn-HrtMMNvSbow4v_nDDA0wiH52YYQUnlXk5ihrrodmcGdzVzG9LgqzCyQqQfLjwBeDXmNTNxqVimx0nftteT8LG5FU8xUip58pgunHqz5Eu8k5bSCGBJjRcOtlXo9N64rVjeQQsRt0HuFGvNEaYx3iEePur_WIMfOaJ_ntJowUcuAY4LyH5lAtvQaRkH4QuMsjtDMthhj1LBJyyOKLQT-ziPWerNQbVi2l64qKkOWXUTfNo27txuevfaCccg4Puo2xuGfIp7ItCK-P_Gjikiyu4TWB8EU2wPPA-7jw7Vx_J2mbM7Q1eTa9AQZHdwwc2Btfh7sb1wu_SEJPmpYsCjgsMsA1CFrj3a5Ehg71ZOg55x00EWTKP-1FyTGo8NfuqDxlp9vSk"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "titulo",
+									"value": "Celular iphone",
+									"type": "text"
+								},
+								{
+									"key": "descricao",
+									"value": "Uma descriçao do celular",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/produtos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"produtos"
+							]
+						},
+						"description": "Cadastrar um  produto"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Get usuario logado",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"description": "Envio via formulario",
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"description": "Resposta do laravel como json",
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjllMTJhZTQwODg1OGVmZTA4NTdhNDk4ODM4MDI2MGZiNzRmYWE1ZWUxOWQ5NGRhNjY2ZDNlOGY2MGE3YzI3Y2NlN2YxMmZkMWM1ZDcyNGExIn0.eyJhdWQiOiIxIiwianRpIjoiOWUxMmFlNDA4ODU4ZWZlMDg1N2E0OTg4MzgwMjYwZmI3NGZhYTVlZTE5ZDk0ZGE2NjZkM2U4ZjYwYTdjMjdjY2U3ZjEyZmQxYzVkNzI0YTEiLCJpYXQiOjE1NTA4NjQ0MDksIm5iZiI6MTU1MDg2NDQwOSwiZXhwIjoxNTUxMTIzNjA5LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.SN9Ta7JAPLavAITZenvIvUyuA4kDsTH_vLjikZHlFQA2YMIArAcBqfKvAF2OkNoG2Sdc1DVQ1Dadz1-JGPejLSxXsOIshkRxGf6HlVv72GxSVEEYa3WZvBQQdjUI0IJElNSWw74dHMAkFC-HlfolwQNTS1HDkT53zmuiHAysE_Z1kjJdUHIHoSk3Juxo2Fgdj9iY0lWdRwtK7jGGxBzwU90cPzPyrhW0KniFM1gHkvf5E_oExftTguaF5qIT-YUpAhLVJF8F180TPt8EzrU1BYCLZ2ZDNUCxPDEzKBgaU5GynFpPYmM2kUTnoHvo5byR0D6c7ygUE2-nnAoso_4RbdaJCAYhzgapHqGcAvypt3Gxg2OTLB82nYaO2gLITPEKvkRYEH5psLBr-2V174Q2HdhBLY-cnYaOdFKiaHTE-QK29wLq-wJD8gpD6DAHbnsdz-sA3xpkw79VkUbY7_c9LQmRhEyMOx10CqUGSt6FzSYDzFRt6fzVVtwAmy-_vaJbPxZ863F8VxmIig04b7ZzDxvEdFms1p65AX5RYfR1jg6zLQCmTZ9BW94TFyKTMS5XT_cEzYwjRz-9OKRL4PGIwoSWhu1tGk_Mvhvv9p8sBMktzT6vrZ8M_TBITDVbPfCz-0qvQezRqSvfo7NMnYHIZ9hwv-UQ8F_-ZNLdiBfxKbg"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v1/usuario/info",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"usuario",
+						"info"
+					]
+				},
+				"description": "Lista de produtos"
+			},
+			"response": []
+		},
+		{
+			"name": "Oauth2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "DMwrZ4iiad6kImtE3cbceaXEmCD7evhwlvpdDc2J",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "admin@admin.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "secret",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/oauth/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"oauth",
+						"token"
+					]
+				},
+				"description": "Lista de produtos"
+			},
+			"response": []
+		},
+		{
+			"name": "Auth front-end",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"description": "Resposta do laravel como json",
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8000/oauth/authorize?client_id=2&response_type=token&scope=&redirect_uri=http://meusite.com/pagina-de-login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"oauth",
+						"authorize"
+					],
+					"query": [
+						{
+							"key": "client_id",
+							"value": "2"
+						},
+						{
+							"key": "response_type",
+							"value": "token"
+						},
+						{
+							"key": "scope",
+							"value": ""
+						},
+						{
+							"key": "redirect_uri",
+							"value": "http://meusite.com/pagina-de-login"
+						}
+					]
+				},
+				"description": "Autenticação front-end"
+			},
+			"response": []
+		},
+		{
+			"name": "Refresh token",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": "Resposta do laravel como json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "refresh_token",
+							"type": "text"
+						},
+						{
+							"key": "refresh_token",
+							"value": "def50200ae277a2eed67f3bf0f3e905bcb90a82c4d27f2b6d9455175f8a6801830088f8c98c9799f6b1e76104990ae4ff36f26c6e236be31c1a51aedb42327d72af9f254d8e1d54be8cc83cd7e3ea66d3961f6bc23b651d97867af1ef22d6277fecf447e59a56f403b52cf91346416365cb23ae8660087217257f739ce396e9846f8ca00b2ddbb69a8caa0b85a7f9c84a51bd8d85fb958253bc19160ca38ec6649fa0c5d7a89eb8a35228c83085610ef90d0c21c970e106e9191ea0fe8984b02722cec0d220f90ae2609c2e1f8dcef26a219dd7e6c047cd9f69d0c763653d436810eaa9c30fc3c378ae098a68e14f6bdbdbaf26a5447498745c76bd2dc95487bc3c2a46dbbcd106711a19cec58e6e463d95f27bc6970e4f3cbfaf208d82e22b8ee8dcb786285c64fc6e7406710416c8d1367ad798a6ffcee56b34bbb1755f27858a726b7d4e6eb700b019d1353df01774d3c5b2c565fb6c7f6d4bdcbe6ebabffef",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "zTVrrxrto1w0xxuPVKr14U0FsF8cEDHgtiS2J1ab",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/oauth/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"oauth",
+						"token"
+					]
+				},
+				"description": "Autenticação front-end"
+			},
+			"response": []
+		}
+	]
+}
